@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后台管理-用户搜索</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            padding-top: 60px;
+        }
+        .wrap{
+            border: 1px solid #ccc;
+            border-top: none;
+            padding: 10px 15px;
+        }
+        .wrap b{
+            display: block;
+            padding-bottom: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">灵异学院</a>
+                <button type="button" data-toggle="collapse" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><span class="glyphicon glyphicon-home"></span>
+                        后台首页</a></li>
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span>
+                        用户管理</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>
+                        内容管理</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-tags"></span>
+                        标签管理</a></li>
+                </ul>
+
+                <ul class="navbar-nav nav  navbar-right">
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown">admin<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">注销</a></li>
+                            <li><a href="">切换用户</a></li>
+                            <li><a href="">个人设置</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><span class="glyphicon glyphicon-off"></span>退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="list-group col-lg-2">
+            <a class="list-group-item" href="#">用户管理</a>
+            <a class="list-group-item active" href="#">用户搜索</a>
+            <a class="list-group-item" href="#">添加用户</a>
+        </div>
+        <br>
+        <div class="col-lg-10">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#">搜索</a></li>
+            </ul>
+            <div class="wrap">
+                <br>
+                <div class="alert alert-danger">技巧提示：支持模糊搜索和匹配搜索，匹配搜索使用*代替！</div>
+                <br>
+                <b>用户名</b>
+                <input type="text" class="form-control" placeholder="输入用户名">
+                <br>
+                <b>UID</b>
+                <input type="text" class="form-control" placeholder="输入UID">
+                <br>
+                <b>用户组</b>
+                <select name="" id="" class="form-control">
+                    <option value="">限制会员</option>
+                    <option value="">新手上路</option>
+                    <option value="">注册会员</option>
+                    <option value="">中级会员</option>
+                    <option value="">高级会员</option>
+                </select>
+                <br>
+                <button>搜索</button>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

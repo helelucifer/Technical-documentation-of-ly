@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后台首页</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            padding-top: 60px;
+        }
+        .panel-height{
+            height: 260px;
+        }
+        .row+.row .panel-height{
+            height: 350px;
+        }
+        .message ul li{
+            background-color: #f1f1f1;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">灵异学院</a>
+                <button type="button" data-toggle="collapse" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>
+                        后台首页</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>
+                        用户管理</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>
+                        内容管理</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-tags"></span>
+                        标签管理</a></li>
+                </ul>
+
+                <ul class="navbar-nav nav  navbar-right">
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown">admin<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">注销</a></li>
+                            <li><a href="">切换用户</a></li>
+                            <li><a href="">个人设置</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><span class="glyphicon glyphicon-off"></span>
+                            退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h3>程序有漏洞，急需修复！</h3>
+        <h5>当前版本程序存在严重安全问题，容易造成安全攻击，请即刻修复！</h5>
+        <button class="btn btn-default btn-danger">立即修复</button>
+        <button class="btn btn-default">稍后处理</button>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default panel-height">
+                <div class="panel-heading">网站数据统计</div>
+
+                <div class="panel-body">
+                    <table class="table">
+                        <tr>
+                            <th>统计项目</th>
+                            <th>昨日</th>
+                            <th>今日</th>
+                        </tr>
+                        <tr>
+                            <td>注册会员</td>
+                            <td>20</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>登录会员</td>
+                            <td>34</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td>今日发帖</td>
+                            <td>234</td>
+                            <td>234</td>
+                        </tr>
+                        <tr>
+                            <td>今日跟帖</td>
+                            <td>125</td>
+                            <td>342</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default  panel-height">
+                <div class="panel-heading">网络热帖</div>
+                <ul class="list-group tie">
+                    <li class="list-group-item"><a href=""><span class="glyphicon glyphicon-list-alt"></span>
+                        职业教育，效果和就业为王。</a><span class="pull-right">2016/10/11</span></li>
+                    <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-list-alt"></span>
+                        工资翻番，不辞职也能学到新技能！</a><span class="pull-right">2016/10/11</span></li>
+                    <li class="list-group-item"><a href=""><span class="glyphicon glyphicon-list-alt"></span>
+                        初探物联网时代和物联网感知端的开发</a><span class="pull-right">2016/10/11</span></li>
+                    <li class="list-group-item"><a href=""><span class="glyphicon glyphicon-list-alt"></span>
+                        深入浅出nodejs</a><span class="pull-right">2016/10/11</span></li>
+                    <li class="list-group-item"><a href=""><span class="glyphicon glyphicon-list-alt"></span>
+                        bootstrap详解</a><span class="pull-right">2016/10/11</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default  panel-height">
+                <div class="panel-heading">今日推荐</div>
+                <div class="panel-body">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- 轮播（Carousel）项目 -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="image/001.png" alt="First slide">
+                            </div>
+                            <div class="item">
+                                <img src="image/002.png" alt="Second slide">
+                            </div>
+                            <div class="item">
+                                <img src="image/003.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="carousel-control left" href="#myCarousel"
+                           data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                        <a class="carousel-control right" href="#myCarousel"
+                           data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default  panel-height">
+                <div class="panel-heading">服务器状态</div>
+                <div class="panel-body">
+                    <p>内存使用率：40%</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        </div>
+                    </div>
+                    <p>数据使用率：20%</p>
+                    <div class="progress">
+
+                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        </div>
+                    </div>
+                    <p>磁盘使用率：60%</p>
+                    <div class="progress">
+
+                        <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        </div>
+                    </div>
+                    <p>CPU使用率：80%</p>
+                    <div class="progress">
+
+                        <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">团队留言板</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-7 message">
+                            <ul class="media-list">
+                                <li class="media">
+                                    <a class="media-left" href="#"><img src="image/头像01.gif"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">带头大哥</h4>
+                                        <p>今晚把程序升级一下</p>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <div class="media-body text-right">
+                                        <h4 class="media-heading">跟班小弟</h4>
+                                        <p>收到，今晚两点准时升级</p>
+                                    </div>
+                                    <a class="media-right" href="#"><img src="image/02.png"></a>
+                                </li>
+                                <li class="media">
+                                    <div class="media-body text-right">
+                                        <h4 class="media-heading">跟班小弟</h4>
+                                        <p>请兔兔在站点公布停机公告啊</p>
+                                    </div>
+                                    <a class="media-right" href="#"><img src="image/02.png"></a>
+                                </li>
+                                <li class="media">
+                                    <a class="media-left" href="#"><img src="image/头像02.gif"></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">兔兔</h4>
+                                        <p>好的，这就去！</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-5">
+                            <div>
+                                <b>请输入留言内容</b>
+                                <br>
+                                <textarea class="form-control" rows="5"></textarea>
+                                <br>
+                                <input type="button" value="留言">
+                                <br> <br>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">团队联系手册</div>
+                                    <div class="panel-body">
+                                        <ul class="list-group ">
+                                            <li class="list-group-item">站长/带头大哥:<span ><span class="glyphicon glyphicon-phone"></span>13801234567</span></li>
+                                            <li class="list-group-item">后端/跟班小弟:<span ><span class="glyphicon glyphicon-phone"></span>13801234568</span></li>
+                                            <li class="list-group-item">前端/微微一笑:<span ><span class="glyphicon glyphicon-phone"></span>13801234569</span></li>
+                                            <li class="list-group-item">推广/带头大哥:<span ><span class="glyphicon glyphicon-phone"></span>13801234567</span>
+                                                <br>
+                                                <span class="glyphicon glyphicon-phone-alt text-left">
+                                            0731-88236544</span></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

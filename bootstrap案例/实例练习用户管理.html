@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后台管理-用户管理</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            padding-top: 60px;
+        }
+        b{
+            display: block;
+            padding-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">灵异学院</a>
+                <button type="button" data-toggle="collapse" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><span class="glyphicon glyphicon-home"></span>
+                        后台首页</a></li>
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span>
+                        用户管理</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>
+                        内容管理</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-tags"></span>
+                        标签管理</a></li>
+                </ul>
+
+                <ul class="navbar-nav nav  navbar-right">
+                    <li class="dropdown">
+                        <a href="" data-toggle="dropdown">admin<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">注销</a></li>
+                            <li><a href="">切换用户</a></li>
+                            <li><a href="">个人设置</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><span class="glyphicon glyphicon-off"></span>退出</a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="list-group col-lg-2">
+            <a class="list-group-item active" href="#">用户管理</a>
+            <a class="list-group-item" href="#">用户搜索</a>
+            <a class="list-group-item" href="#">添加用户</a>
+        </div>
+        <div class="col-lg-10">
+            <h4>
+                用户管理<button type="button" class="btn btn-default pull-right btn-primary " data-toggle="modal" data-target="#myModal">添加用户</button>
+            </h4>
+            <hr>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#">用户列表</a></li>
+            </ul>
+            <br>
+                <table class="table table-hover ">
+                    <tr>
+                        <th>ID</th>
+                        <th>用户名</th>
+                        <th>邮箱</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>张三</td>
+                        <td>21324234@qq.com</td>
+                        <td >
+                            <div class="dropdown">
+                                <button data-toggle="dropdown" class="btn btn-default ">操作<span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">拉黑</a></li>
+                                    <li><a href="">设为管理员</a></li>
+                                    <li><a href="">加入白名单</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>张三</td>
+                        <td>21324234@qq.com</td>
+                        <td >
+                            <div class="dropdown">
+                                <button data-toggle="dropdown" class="btn btn-default ">操作<span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">拉黑</a></li>
+                                    <li><a href="">设为管理员</a></li>
+                                    <li><a href="">加入白名单</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>                    <tr>
+                    <td>123</td>
+                    <td>张三</td>
+                    <td>21324234@qq.com</td>
+                    <td >
+                        <div class="dropdown">
+                            <button data-toggle="dropdown" class="btn btn-default ">操作<span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="">拉黑</a></li>
+                                <li><a href="">设为管理员</a></li>
+                                <li><a href="">加入白名单</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>                    <tr>
+                    <td>123</td>
+                    <td>张三</td>
+                    <td>21324234@qq.com</td>
+                    <td >
+                        <div class="dropdown">
+                            <button data-toggle="dropdown" class="btn btn-default ">操作<span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="">拉黑</a></li>
+                                <li><a href="">设为管理员</a></li>
+                                <li><a href="">加入白名单</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                </table>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">添加用户</h4>
+            </div>
+            <div class="modal-body">
+                <br>
+                <b>用户名</b>
+                <input type="text" class="form-control" placeholder="输入用户名">
+                <br>
+                <b>请输入密码</b>
+                <input type="text" class="form-control" placeholder="请输入密码">
+                <br>
+                <b>确认密码</b>
+                <input type="text" class="form-control" placeholder="确认密码">
+                <br>
+                <b>请输入邮箱</b>
+                <input type="text" class="form-control" placeholder="请输入邮箱">
+                <br>
+                <b>用户组</b>
+                <select name="" id="" class="form-control">
+                    <option value="">限制会员</option>
+                    <option value="">新手上路</option>
+                    <option value="">注册会员</option>
+                    <option value="">中级会员</option>
+                    <option value="">高级会员</option>
+                </select>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
